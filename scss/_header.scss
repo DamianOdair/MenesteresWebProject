@@ -1,0 +1,41 @@
+@import 'color';
+
+%align-center{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+.header{
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: $purple;
+        height: 60px;
+        padding: 5px;
+        z-index: 10;
+        position: relative;
+        @extend %align-center;
+            
+        &--icono{
+            & a{
+                text-decoration: none;
+                color: $blackTittle;
+                cursor: pointer;
+            }
+        }
+        &--menu{
+            display: flex;
+            list-style: none;
+            & li{
+                margin: 0 5px;
+               & a{
+                   text-decoration: none;
+                   color: $blackTittle;
+               }
+            }
+        }
+    }
+    
+
+    
+}
