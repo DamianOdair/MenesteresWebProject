@@ -1,15 +1,16 @@
 @import 'color';
+@import 'media-queries';
 
 %align-center{
     display: flex;
-    align-self: center;
     align-items: center;
 }
 .header{
     &__nav{
         display: flex;
         justify-content: space-between;
-        background-color: $purple;
+        align-self: center;
+        background-color: $whiteTittle;
         height: 60px;
         padding: 5px;
         z-index: 10;
@@ -21,21 +22,94 @@
                 text-decoration: none;
                 color: $blackTittle;
                 cursor: pointer;
-            }
+                }
+            
         }
         &--menu{
             display: flex;
             list-style: none;
             & li{
-                margin: 0 5px;
+                margin: 0 8px;
                & a{
                    text-decoration: none;
                    color: $blackTittle;
-               }
+                   font-size: 19px;
+                   font-weight: 900;
+
+                   &:hover{
+                    color: $purple;
+                    transition: all 0.3s ease;
+                   }
+                }
+            }
+
+            @include tablet{
+                display: none;
+            }
+        }
+        &--menuicon{
+            opacity: 0;
+
+            @include tablet{
+                opacity: 1;
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                font-size: 20px;
             }
         }
     }
-    
+    &__redes{
+        position: absolute;
+        right: 0;
+        top: 250px;
+        display: flex;
+        flex-direction: column;
 
-    
+        & i{
+            font-size: 30px;
+            padding: 10px 5px 0 0;
+        }
+    }
+
+    &__castillo{
+        position: relative;
+        left: 20px;
+        &--left1{
+            position: absolute;
+            top: 200px;
+            left: -10px;
+            z-index: 100;
+        }
+        &--left2{
+            position: absolute;
+            top: 200px;
+            left: 350px;
+            z-index: 100;
+        }
+        &--right1{
+            position: absolute;
+            top: 400px;
+            left: -20px;
+            z-index: 100;
+        }
+        &--right2{
+            position: absolute;
+            top: 400px;
+            left: 350px;
+            z-index: 100;
+        }
+        &--castle{
+            position: absolute;
+            top: 390px;
+            left: 10px;
+            z-index: 2;
+        }
+        &--luna{
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            z-index: 1;
+        }
+    }
 }
