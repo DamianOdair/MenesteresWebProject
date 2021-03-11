@@ -7,6 +7,10 @@
           align-items: center;
 }
 
+.header {
+  height: 100%;
+}
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,9 +25,13 @@
   padding: 5px;
   z-index: 10;
   position: relative;
+  left: 0;
 }
 
 .header__nav--icono a {
+  position: relative;
+  left: 15px;
+  font-size: 40px;
   text-decoration: none;
   color: #000000;
   cursor: pointer;
@@ -84,6 +92,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
 }
 
 .header__redes i {
@@ -91,51 +100,64 @@
   padding: 10px 5px 0 0;
 }
 
-.header__castillo {
-  position: relative;
-  left: 20px;
+.header #header__castillo {
+  background: sienna;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
-.header__castillo--left1 {
+.header #header__castillo--left1 {
   position: absolute;
   top: 200px;
   left: -10px;
   z-index: 100;
 }
 
-.header__castillo--left2 {
+.header #header__castillo--left2 {
   position: absolute;
   top: 200px;
   left: 350px;
   z-index: 100;
 }
 
-.header__castillo--right1 {
+.header #header__castillo--right1 {
   position: absolute;
   top: 400px;
   left: -20px;
   z-index: 100;
 }
 
-.header__castillo--right2 {
+.header #header__castillo--right2 {
   position: absolute;
   top: 400px;
   left: 350px;
   z-index: 100;
 }
 
-.header__castillo--castle {
+.header #header__castillo--castle {
   position: absolute;
-  top: 390px;
-  left: 10px;
+  bottom: -50px;
+  left: 200px;
   z-index: 2;
 }
 
-.header__castillo--luna {
+.header #header__castillo--luna {
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 10px;
   z-index: 1;
+}
+
+#Nosotros {
+  position: relative;
+}
+
+#Nosotros img {
+  width: 100%;
 }
 
 * {
@@ -146,8 +168,17 @@
   font-family: 'Benne', sans-serif;
 }
 
+html {
+  min-height: 100%;
+  /* make sure it is at least as tall as the viewport */
+  position: relative;
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow: hidden;
-  background: url(https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltff8b4ae5f4cc8808/5f7d058d3dea860e7be3d93f/00_Header.jpg);
+  background: seagreen;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
