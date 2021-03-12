@@ -1,3 +1,6 @@
+const seccionesPagina = new fullpage('#fullpage', {
+
+});
 window.onload = function () {
     document.onmousemove = function(ev) {
         var x = ev.clientX / 50 
@@ -10,8 +13,3 @@ window.onload = function () {
         document.getElementById('header__castillo--right2').style=`position:absolute; left:${x+350}px; top:${-y+400}px;`;
     }
 }
-window.scrollBy({ 
-    top: 100, // could be negative value
-    left: 0, 
-    behavior: 'smooth' 
-  });

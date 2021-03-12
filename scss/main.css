@@ -7,10 +7,6 @@
           align-items: center;
 }
 
-.header {
-  height: 100%;
-}
-
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,7 +20,9 @@
   height: 60px;
   padding: 5px;
   z-index: 10;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
   left: 0;
 }
 
@@ -152,14 +150,6 @@
   z-index: 1;
 }
 
-#Nosotros {
-  position: relative;
-}
-
-#Nosotros img {
-  width: 100%;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -178,8 +168,11 @@ html {
 body {
   background: seagreen;
   overflow-x: hidden;
-  overflow-y: hidden;
   height: 100vh;
-  height: 400px;
+}
+
+div {
+  position: relative;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

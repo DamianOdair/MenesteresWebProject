@@ -15,7 +15,10 @@ html{
 body{
     background: seagreen;
     overflow-x: hidden;
-    overflow-y: hidden;
+   // overflow-y: hidden;
     height: 100vh;
-    height: 400px;
+}
+div{
+    position: relative;
+    height: 100%;
 }
